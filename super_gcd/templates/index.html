@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Super GCD App</title>
+</head>
+
+<body>
+    <h1>Super GCD App!</h1>
+    <form method="post">
+        <span>Number 1: </span>
+        <input type="text" name="number_1" placeholder="Number 1" value="{{ request.form['number_1'] }}"></input>
+        <br />
+        <span>Number 2: </span>
+        <input type="text" name="number_2" placeholder="Number 2" value="{{ request.form['number_2'] }}"></input>
+        <br />
+        <button type="submit">Go!</button>
+        <br>
+        <p class="result">The GCD is 123</p>
+    </form>
+</body>
