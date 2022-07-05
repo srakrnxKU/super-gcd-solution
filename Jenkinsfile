@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
-                sh 'pip install -e .\[test\]'
+                sh 'pip install -e .[test]'
             }
         }
         stage('Test') {
