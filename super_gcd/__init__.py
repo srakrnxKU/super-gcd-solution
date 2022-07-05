@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 def gcd(x, y):
     """Returns the greatest common denominator of x and y"""
-    # TODO: implement this
-    return -1
+    for i in range(min(x, y) + 1, 0, -1):
+        if x % i == 0 and y % i == 0:
+            return i
 
 
 @app.route("/", methods=["GET", "POST"])
