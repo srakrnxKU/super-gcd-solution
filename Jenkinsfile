@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
-                sh 'pip install -e .[test]'
+                sh 'python3 -m pip install --user -e .[test]'
             }
         }
         stage('Test') {
