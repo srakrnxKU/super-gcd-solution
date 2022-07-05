@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'pytest --junitxml=tmp/out_report.xml'
+                sh 'python3 -m pytest --junitxml=tmp/out_report.xml'
             }
         }
         stage('Deploy') {
