@@ -8,11 +8,13 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls -al'
+                sh 'pip install -e .\[test\]'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
+                sh 'pytest --junitxml=tmp/out_report.xml'
             }
         }
         stage('Deploy') {
